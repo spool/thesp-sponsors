@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load typogrify %}
+
+{% block title %}Sponsors{% endblock %}
+
+{% block content %}
+  <ul class="sponsors">
+  {% for sponsor in object_list %}
+    <li>
+      {% if sponsor.logo %}
+        <a href="{{ sponsor.website }}">
+            <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }} logo" height="2em" />
+        </a>
+      {% endif %}
+      <h3>
+          <a href="{{ sponsor.website }}">{{ sponsor.name }}</a>
+      </h3>
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}
