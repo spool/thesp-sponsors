@@ -9,4 +9,4 @@ class Sponsor(models.Model):
     logo = models.ImageField(blank=True, null=True, upload_to="logos")
 
     def __unicode__(self):
-        return name
+        return self.name
