@@ -12,10 +12,10 @@
         <a href="{{ sponsor.website }}">
             <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }} logo" width="80px" />
         </a>
+      {% endif %}
       <h3>
           <a href="{{ sponsor.website }}">{{ sponsor.name }}</a>
       </h3>
-      {% endif %}
     </li>
   {% endfor %}
   </ul>
