@@ -8,14 +8,14 @@
   <ul class="sponsor-list">
   {% for sponsor in object_list %}
     <li>
-      {% if sponsor.logo %}
-        <a href="{{ sponsor.website }}">
-            <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }} logo" height="2em" />
-        </a>
-      {% endif %}
       <h3>
           <a href="{{ sponsor.website }}">{{ sponsor.name }}</a>
       </h3>
+      {% if sponsor.logo %}
+        <a href="{{ sponsor.website }}">
+            <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }} logo" width="80px" />
+        </a>
+      {% endif %}
     </li>
   {% endfor %}
   </ul>
